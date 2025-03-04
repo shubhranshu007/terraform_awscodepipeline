@@ -4,7 +4,7 @@ provider "aws" {
 
 # S3 Bucket for Storing Source Code
 resource "aws_s3_bucket" "codepipeline_bucket" {
-  bucket = "my-cicd-pipeline-bucket-wtwdcvg" # Change this to a unique name
+  bucket = "my-cicd-pipeline-bucket-wtwdcvg-fvajhb" # Change this to a unique name
 }
 
 # IAM Role for CodePipeline
