@@ -86,7 +86,8 @@ jobs:
       run: terraform init
 
     - name: terraform destroy
-      run: terraform destroy -auto-approve -input=false
+      run: terraform state list
+ #     run: terraform destroy -auto-approve -input=false
 
     # Checks that all Terraform configuration files adhere to a canonical format
   #  - name: Terraform Format
