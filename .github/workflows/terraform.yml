@@ -1,8 +1,20 @@
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select the deployment environment"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      ENVIRONMENT: production  # Define an environment variable
     steps:
-      - name: Print Environment
-        run: echo "Deploying to $ENVIRONMENT"
+      - name: Print Selected Environment
+        run: echo "Deploying to ${{ inputs.environment }}"
+
