@@ -10,4 +10,3 @@ output "sns_topic_arns" {
   value = aws_sns_topic.ai_sns_topic.arn
 }
 
-
