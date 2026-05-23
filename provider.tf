@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-south-1" # Change this to your region
+  region = "us-east-1" # Change this to your region
 }
 
 resource "aws_sns_topic" "ai_sns_topic" {
