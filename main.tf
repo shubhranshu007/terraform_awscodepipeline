@@ -1,11 +1,3 @@
-provider "aws" {
-  region = "us-east-1" # Change this to your region
-}
+The error message indicates that Terraform is unable to find a log stream named "ai-sns-topic" in your AWS SNS topic resource block (`aws_sns_topics`). 
 
-resource "aws_sns_topics" "ai_sns_topic" {
-  name = "ai-sns-topic"
-}
-
-output "sns_topic_arn" {
-  value = aws_sns_topic.ai_sns_topic.arn
-}
+In order for this issue, you need firstly create an Amazon CloudWatch Log Group and then attach the previously created logs group as destination. Here is how to do it:
