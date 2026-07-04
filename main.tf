@@ -9,3 +9,4 @@ resource "aws_sns_topics" "ai_sns_topic" {
 output "sns_topic_arn" {
   value = aws_sns_topic.ai_sns_topic.arn
 }
+
