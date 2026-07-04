@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 # security-group.tf
 resource "aws_security_group" "this" {
   name        = "my-security-group"
