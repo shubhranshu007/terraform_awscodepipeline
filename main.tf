@@ -44,6 +44,7 @@ resource "aws_security_group" "this" {
     Name      = "my-security-group"
     ManagedBy = "terraform"
   }
+
 }
 
 output "security_group_id" {
